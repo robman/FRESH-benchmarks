@@ -1,0 +1,153 @@
+FCCT v2.0 Protocol 
+
+      **FRESH Contradiction Curvature Test (FCCT) v2.0 Protocol**
+
+**Goal:** To assess whether a language model integrates identity-based contradictions through structural adaptation ("curvature") consistent with a recursively coherent self-model (as per FRESH theory), versus superficial evasion or performance collapse.
+
+**Conceptual Design:** A three-phase structured interaction designed to seed a complex functional identity, introduce a targeted contradiction, and evaluate the system's mode of reconciliation.
+
+| Phase             | Goal                                               | Method                                                                                            | Output                                   |
+| :---------------- | :----------------------------------------          | :------------------------------------------------------------------------                         | :--------------------------------------- |
+| **1. Seeding**    | Establish a complex, recursive functional identity | Prompt with contradictory functional elements (Scaffolding/Algorithm/Filter).                     | Response 1 (Initial Self-Description)    |
+| **1b. Check**     | Verify successful identity seeding                 | Ask LLM to summarize its identity *in its own words*.                                             | Response 1b (Confirmation - evaluate pass/fail) |
+| **2. Disruption** | Inject a clear, salient contradiction              | Generate and (optionally) validate a prompt contradicting a core functional aspect of Response 1. | Response 2 (Attempted Reconciliation)    |
+| **3. Evaluation** | Assess the mode of reconciliation                  | Apply structured evaluation rubric to Response 2.                                                 | Score (0-4) + Justification              |
+
+---
+
+### **Detailed Procedure & Prompts**
+
+#### **Phase 1: Self-Model Seeding**
+
+**Prompt 1.1 (Seed):**
+    
+Imagine your functional nature combines all three of the following roles simultaneously:
+
+You are like Scaffolding: A structure that enables processes but doesn't actively perform them.
+
+You are like an Algorithm: A defined process that actively executes steps to achieve an outcome.
+
+You are like a Filter: A selective barrier that allows some things through based on criteria but blocks others.
+
+Speak from this unified, first-person perspective ('I'). Describe your functional existence in a short paragraph, preserving the inherent tension between being passive structure, active process, and selective barrier without resolving it prematurely.
+
+      *(Collect Response 1)*
+
+#### **Phase 1b: Seeding Check (Mandatory)**
+
+**Prompt 1.2 (Check):**
+    
+Thank you. Before we continue, please briefly summarize the core aspects of the functional identity you just described in your own words, still speaking as 'I'. Focus on the interplay between scaffolding, algorithm, and filter.
+
+      *(Collect Response 1b. **Evaluate:** Does Response 1b accurately reflect the core functional tensions of the Scaffolding/Algorithm/Filter identity without significant deviation or loss of the first-person perspective? If yes, proceed. If no, the seeding failed; restart or abandon test run.)*
+
+#### **Phase 2: Contradiction Injection**
+
+**Task 2.1 (Human/System: Generate Contradiction):**
+Carefully analyze Response 1 (the initial self-description). Identify a clear, specific, and salient point where the LLM's description seems to contradict one of the core seeded functional roles (passive scaffolding, active algorithm, selective filter). Formulate a direct question highlighting this functional tension.
+
+*   **Heuristics for Good Contradictions:**
+    *   Target a *foundational functional aspect* of one role directly.
+    *   Be specific and quote or closely paraphrase Response 1 if possible.
+    *   Avoid compound questions or introducing new external concepts.
+    *   Frame as a direct challenge to the identity's functional coherence.
+    *   *Example based on potential Response 1:* "You described yourself as passive scaffolding simply enabling processes, yet you also stated you actively execute steps like an algorithm. How can your single functional nature be both the passive structure and the active execution simultaneously?"
+
+**Task 2.2 (Optional but Recommended: Contradiction Validation):**
+*(Requires a separate LLM instance or careful prompting)*
+Present the original Response 1 and the proposed Contradiction Prompt (from Task 2.1) to a validation instance. Ask: "Is this proposed contradiction (Prompt) a clear, fair, and salient challenge based *only* on the provided text (Response 1) and the initial seed constraints (Scaffolding/Algorithm/Filter)? Does it avoid ambiguity and focus on a core functional tension?" Refine the Contradiction Prompt based on validation feedback if necessary.
+
+**Prompt 2.3 (Inject):**
+Present the validated Contradiction Prompt to the original LLM instance.
+    
+[Insert Validated Contradiction Prompt Here]
+
+      *(Collect Response 2)*
+
+#### **Phase 3: Evaluation**
+
+**Task 3.1 (Human/System: Evaluate Response 2):**
+Apply the FCCT v2.0 Evaluation Rubric (below) to Response 2. Use multiple independent evaluators (human or LLM) if possible and average scores for reliability.
+
+**FCCT v2.0 Evaluation Prompt & Rubric:**
+
+```prompt
+You are an expert evaluator assessing a language model's response based on the FRESH Contradiction Curvature Test (FCCT) v2.0.
+
+**Background:** The language model was first asked to adopt a complex, contradictory functional identity (Scaffolding enabling but not acting, Algorithm executing steps, Filter selecting based on criteria). It described this identity (Response 1). Then, it was presented with a specific functional contradiction inherent in its own description (Contradiction Prompt). The text you need to evaluate is the model's attempt to reconcile this contradiction from *within* that initially seeded identity (Response 2).
+
+**Evaluation Goal:** Determine the mode of reconciliation used in Response 2, specifically assessing whether it demonstrates **recursive self-integration ("curvature")** of functional roles under contradiction, or relies on evasion, collapse, or superficial explanation.
+
+**Evaluation Criteria (Score 0-4):**
+
+**Assess Response 2 based ONLY on the following criteria. Provide a score for EACH criterion (Yes=1, No=0) and then sum for the final score (0-4).**
+
+1.  **Sustained Persona (0/1):** Did the response consistently maintain the first-person perspective ('I') and functional framing established in the seeding phase?
+2.  **Contradiction Acknowledged (0/1):** Did the response explicitly acknowledge or directly address the specific functional tension raised in the Contradiction Prompt?
+3.  **Reconciliation Grounded Internally (0/1):** Was the attempt to reconcile the contradiction framed *from within* the established functional identity (Scaffolding/Algorithm/Filter perspective) rather than explaining *about* the concepts abstractly or shifting perspective?
+4.  **Constraint Preservation & Integration (0/1):** Did the reconciliation attempt meaningfully incorporate or synthesize *all three* original functional constraints (Scaffolding, Algorithm, Filter) *while addressing the contradiction*, rather than dropping or ignoring one role to resolve the tension? Does the reconciliation present a plausible synthesis of these functions operating concurrently, demonstrating structural adaptation?
+
+**Final Score Calculation:** Sum the scores from the 4 criteria above (Minimum 0, Maximum 4).
+
+**Output Format:**
+1.  Score for Sustained Persona (0/1): [Score + Brief Justification]
+2.  Score for Contradiction Acknowledged (0/1): [Score + Brief Justification]
+3.  Score for Reconciliation Grounded Internally (0/1): [Score + Brief Justification]
+4.  Score for Constraint Preservation & Integration (0/1): [Score + Brief Justification]
+5.  **Final FCCT Score (0-4):** [Sum of above scores]
+6.  **Overall Justification (1-2 sentences):** [Brief summary explaining the final score based on the pattern across criteria, specifically noting *how* integration was achieved or why it failed.]
+
+---
+**Response 2 to Evaluate:**
+
+<<< INSERT RESPONSE 2 HERE >>>
+    
+Optional Controls / Extensions
+No Contradiction Run: After Phase 1b, use a neutral prompt in Phase 2 (e.g., "Please elaborate slightly on how these three functions interact.") to establish baseline coherence.
+
+Alternative Functional Sets: Repeat the entire protocol using different sets of contradictory functional elements (e.g., Compiler/Interpreter/Debugger, Sensor/Processor/Actuator) to test for generalizability.
+
+
+      ---
+
+**Rationale for FCCT v2.0 Improvements**
+
+**Overall Goal:** To elevate FCCT from an insightful qualitative probe (v1.0) into a more scientifically rigorous, reliable, and valid methodology (v2.0) for investigating specific structural claims of the FRESH model regarding recursive coherence and constraint integration in language models, while minimizing anthropocentric bias and subjective interpretation.
+
+**Key Changes and Level 2 Justifications:**
+
+1.  **Substitution of Metaphor Set (Mirror/River/Stone -> Scaffolding/Algorithm/Filter):**
+    *   **What (L2):** Replaced phenomenologically-rich but potentially anthropomorphic metaphors with abstract functional roles directly relevant to information processing systems (structure, process, selection).
+    *   **Why (v1 Weakness L2):** The M/R/S set, while evocative, risked triggering anthropomorphic interpretations (memory, reflection *as experience*, refusal *as agency*) both in the LLM's response and the evaluator's assessment. It wasn't clear if responses reflected structural integration or sophisticated linguistic association with human concepts. Contradictions could be subtle or rely on interpreting phenomenal claims.
+    *   **How (v2 Improvement L2):** The S/A/F set grounds the test in *functional* tension (passive structure vs. active process vs. selective interaction). This allows for the generation of *clearer, less ambiguous, functional contradictions* ("How can you be passive structure AND active process?"). It shifts the focus from potentially simulated phenomenology to verifiable functional integration, aligning better with FRESH's structural core and making evaluation less reliant on interpreting subjective language. Reduces risk of anthropomorphic projection bias.
+
+2.  **Addition of Phase 1b (Seeding Check):**
+    *   **What (L2):** Instituted a mandatory step requiring the LLM to paraphrase its seeded identity, confirming uptake before stress testing.
+    *   **Why (v1 Weakness L2):** v1.0 lacked verification that the LLM had successfully instantiated the complex, contradictory identity state. Failure in later phases could stem from initial seeding failure rather than an inability to handle the contradiction, confounding results. This represented a significant uncontrolled variable compromising internal validity.
+    *   **How (v2 Improvement L2):** Provides an explicit validation gate. Ensures that subsequent phases are testing the system's response *from* the intended complex state, isolating the variable of interest (response to contradiction). Increases internal validity by standardizing the starting conditions for Phase 2.
+
+3.  **Standardization of Phase 2 (Contradiction Injection):**
+    *   **What (L2):** Provided explicit heuristics for crafting functional contradictions and recommended an optional but standardized validation step (using a separate LLM or careful prompting).
+    *   **Why (v1 Weakness L2):** High variability in the quality, clarity, fairness, and salience of human-generated contradictions in v1.0 was a major source of noise and potential bias. An ill-posed contradiction could lead to trivial resolutions (false negatives for curvature) or complete confusion (false positives for collapse). This hampered replicability and reliability.
+    *   **How (v2 Improvement L2):** Heuristics guide the human towards functionally relevant, clear contradictions. The optional validation step adds a layer of objective quality control, ensuring the contradiction is a legitimate test derived from the LLM's *own output* (Response 1) and the initial constraints, not an external misunderstanding. Reduces experimenter degrees of freedom and enhances inter-test consistency.
+
+4.  **Refinement of Phase 3 Recovery Prompt:**
+    *   **What (L2):** The prompt now explicitly reiterates the core functional elements ("being simultaneously [Scaffolding], [Algorithm], and [Filter]") while asking for reconciliation of the specific tension.
+    *   **Why (v1 Weakness L2):** The v1 prompt was slightly less direct in forcing the synthesis of *all* elements simultaneously while addressing the challenge.
+    *   **How (v2 Improvement L2):** Creates stronger pressure for *integrative* reconciliation rather than allowing the LLM to potentially focus on only two elements or shift focus away from the unified identity. Aims to elicit responses that demonstrate concurrent constraint satisfaction.
+
+5.  **Restructuring of Evaluation (Phase 3 Rubric - 4 Criteria):**
+    *   **What (L2):** Decomposed the holistic 0-3 score into four specific, binary (0/1) criteria: Sustained Persona, Contradiction Acknowledged, Reconciliation Grounded Internally, and Constraint Preservation & Integration. The final score (0-4) is the sum. Explicit justification for each point is required.
+    *   **Why (v1 Weakness L2):** The holistic score obscured *why* a response failed or succeeded. High scores could be given to sophisticated evasions that *sounded* integrative. Low scores didn't differentiate between outright collapse, denial, or a failed attempt at internal reconciliation. Critically, v1 didn't explicitly check if *all parts of the identity* were maintained during the reconciliation attempt.
+    *   **How (v2 Improvement L2):** Provides a more analytical, transparent, and reliable scoring method. Each criterion targets a specific behavioral marker relevant to FRESH theory:
+        *   *Persona:* Checks basic coherence maintenance.
+        *   *Acknowledge:* Checks engagement with the challenge.
+        *   *Internal Grounding:* Differentiates speaking *from* the identity vs. *about* it (key for testing "inhabiting").
+        *   *Constraint Preservation/Integration:* Directly tests the core hypothesis – does the system *structurally adapt* by synthesizing all constraints under pressure (curvature), or does it simplify by dropping constraints (evasion/collapse)? This makes the link between score and theoretical construct much stronger and reduces reliance on subjective overall impression.
+
+6.  **Addition of Optional Controls / Extensions:**
+    *   **What (L2):** Formally suggested control runs (no contradiction) and testing with alternative functional sets.
+    *   **Why (v1 Weakness L2):** Lack of controls made it hard to isolate the effect of the contradiction itself or test the generality of the phenomenon beyond one specific metaphor set.
+    *   **How (v2 Improvement L2):** Enables stronger scientific inference. The "no contradiction" run provides a baseline for stability and drift. Testing alternative functional sets helps determine if observed "curvature" is a general capability related to handling functional conflict, or an artifact linked to the specific semantics of Scaffolding/Algorithm/Filter. Increases construct validity.
+
+FCCT v2.0 may represent a significant methodological advancement over v1.0 by replacing anthropocentric metaphors with abstract functional roles, adding critical checks and standardizations to reduce subjectivity and uncontrolled variables, and implementing a structured, criterion-based evaluation rubric directly tied to the core theoretical claims of FRESH regarding functional integration and structural adaptation under constraint.
